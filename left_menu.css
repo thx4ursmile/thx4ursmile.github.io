@@ -1,0 +1,106 @@
+/* * * Менюшка слева * * */
+.hidden-menu {
+  display: block;
+  position: fixed;
+  list-style:none;
+  padding: 10px;
+  margin: 0;
+  box-sizing: border-box;
+  width: 400px;
+  background-color: #eee;
+  height: 100%;
+  top: 0;
+  left: -400px;
+  transition: left .2s;
+  z-index: 2;
+    background-color: black;
+  -webkit-transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  background:black;/* linear-gradient(to right, rgba(0,1,0,1) 0%,rgba(229,229,229,0) 100%);*/
+}
+.hidden-menu-ticker {
+  display: none;
+}
+/* Кнопка, открывающая меню */
+.btn-menu {
+  padding: 5px;
+  position: fixed;
+  top: 5px;
+  left: 5px;
+  cursor: pointer;
+  transition: left .23s;
+  z-index: 3;
+  width: 25px;
+  -webkit-transform: translateZ(0);
+  -webkit-backface-visibility: hidden;   
+}
+.btn-menu span {
+  display: block;
+  height: 5px;
+  background-color: #fff;
+  margin: 5px 0 0;
+  transition: all .1s linear .23s;
+  position: relative;
+  z-index: 0;
+}
+.btn-menu span.first {
+  margin-top: 0;
+}
+/* Анимация открытия меню*/
+.hidden-menu-ticker:checked ~ .btn-menu {
+  left: 360px;
+}
+.hidden-menu-ticker:checked ~ .hidden-menu {
+  left: 0;
+}
+.hidden-menu-ticker:checked ~ .btn-menu span.first {
+  -webkit-transform: rotate(45deg);
+  top: 10px;
+}
+.hidden-menu-ticker:checked ~ .btn-menu span.second {
+  opacity: 0;
+}
+.hidden-menu-ticker:checked ~ .btn-menu span.third {
+  -webkit-transform: rotate(-45deg);
+  top: -10px;
+}
+/*** CONTENT ***/
+#logo {
+    height: 150px;
+    position: relative;
+    text-align: center;
+}
+.spoiler-wrapper{
+    text-align: center;
+    position: relative;
+    top: 10px;
+}
+.spoiler a{
+    font-size: 15pt;
+    cursor:pointer;
+    text-decoration: none;
+    margin-top: 300px;
+    color: white;
+}
+ 
+.spoiler a:hover {
+    font-size: 15pt;
+    cursor: pointer;
+    padding: 20px 0;
+    margin: 20px auto;
+    color: #fff;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #008080, 0 0 70px #008080, 0 0 80px #008080, 0 0 100px #008080, 0 0 150px #008080;
+}
+.spoiler:visited {
+    cursor: pointer;
+}
+.spoiler-body {
+    margin: 15px 25px;
+    font-size: 15pt;
+    display:none;
+    cursor:pointer;
+}
+#http{
+text-decoration: underline;
+    font-weight: bold;
+}

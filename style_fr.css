@@ -1,0 +1,107 @@
+@font-face {
+  font-family: kkb; /* Гарнитура шрифта */
+  src: url(dist/kkb.ttf); /* Путь к файлу со шрифтом */
+  } 
+body {
+    background: url(images/ugl.jpg) repeat;
+    background-attachment: fixed;
+	color: #727272;
+	font-family: serif;
+	line-height: 1.5;
+	margin: auto;
+	padding: 0;*/
+}
+header {
+    font-size: 15pt;
+    font-family: kkb;
+    background: linear-gradient(to bottom, rgba(0,1,0,1) 0%,rgba(229,229,229,0) 100%);
+    text-align: center;
+    padding: 1px;
+    margin: 0px;
+    height: 80px;
+}
+                                        /*** Copy link ***/
+button {
+    border: none;
+    background-color: #2f4f4f;
+    font-weight: 700;
+    color:white;
+}    
+button:active {
+    color: white;
+}
+button:hover {
+    background-color: white;
+    color:black;
+}
+                                            /*** List ***/
+.main {
+    width: 1100px;
+    margin: 0 auto;
+}
+.tabs{
+    margin-right: -5%;
+}
+ul.tabs {
+    list-style-type: none;
+    opacity: 0.5;
+}
+ul.tabs li {
+    background: black;
+    float: left;
+    width: 30%;
+    padding: 3px;
+}
+ul.tabs li a {
+    color: #fff;
+    text-decoration: none;
+    color: #fff;
+    list-style-type: none;
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 11pt;
+}
+ul.tabs li a:hover {
+    background-color: white;
+    color: black;
+}
+                                        /*** Site Name ***/
+header a {
+    text-decoration: none;
+    text-align: center;
+    font-size: 2.5em;
+    transition: all 0.5s;
+    color: #fff;
+    animation: neon1 1.5s ease-in-out infinite alternate;
+}
+header a:hover {
+    cursor:default;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #008080, 0 0 80px #008080, 0 0 100px #008080, 0 0 150px #008080;
+  }
+header div {
+  font-size: 55px;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #008080, 0 0 80px #008080, 0 0 100px #008080, 0 0 150px #008080;
+color: white;
+}
+
+
+div p { margin:0;
+z-index: 2;}
+#name:hover {  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #008080, 0 0 80px #008080, 0 0 100px #008080, 0 0 150px #008080;}
+
+#name span:{
+  animation: lower 10s linear infinite;
+}
+
+@keyframes lower {
+  0%,12%,18.999%,23%,31.999%,37%,44.999%,46%,49.999%,51%,58.999%,61%,68.999%,71%,85.999%,96%,100% {
+    opacity:0.99; text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #008080, 0 0 80px #008080, 0 0 100px #008080, 0 0 150px #008080
+  }
+  19%,22.99%,32%,36.999%,45%,45.999%,50%,50.99%,59%,60.999%,69%,70.999%,86%,95.999% { 
+    opacity:0.4; text-shadow: none; 
+  }
+}
+
+

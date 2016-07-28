@@ -1,0 +1,74 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>That`s all</title>
+<link rel="stylesheet" type="text/css" href="style_fr.css" />
+<link rel="stylesheet" type="text/css" href="left_menu.css" />
+<style type="text/css">.spoiler_body {display:none; cursor:pointer;}</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="dist/clipboard.min.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function(){
+		jQuery('.spoiler-text').hide()
+		jQuery('.spoiler').click(function(){
+            jQuery(this).toggleClass("folded").toggleClass("unfolded").next().slideToggle()
+ 		})
+	})
+</script>
+</head>
+<body bgcolor="#000">
+<script>var clipboard = new Clipboard('.btn');</script>
+<header>
+  <div id="name">
+ Thx<span id="name">4</span>urMusic
+  </div>
+</header>
+<input type="checkbox" id="hmt" class="hidden-menu-ticker">
+<label class="btn-menu" for="hmt">
+   <div class="btn">
+    <span class="first"></span>
+    <span class="second"></span>
+    <span class="third"></span>
+    </div>
+</label>
+<div class="hidden-menu">
+<div id="logo">
+    <img src="images/logo.png" height="150">
+   </div>
+   <div class="spoiler-wrapper">
+ <div class="spoiler folded"><a href="" class="spoiler_links">INFO</a>
+ <div class="spoiler-body">
+  Привет!<br> Это просто сайт с музыкой, которую я заказывал на стриме у Максима.
+ </div>
+ </div>
+</div>
+<!--//-->
+  <br>
+   <div class="spoiler-wrapper">
+   <div class="spoiler folded"><a href="" class="spoiler_links">HOW TO USE</a>
+ <div class="spoiler-body">
+Нажав на название песни, ты сможешь её прослушать.<br><hr>
+            Нажав на кнопку <button class="btn" data-clipboard-text="YOU ARE BEST">LINK</button> ты скопируешь <span id="http">http</span> адрес страницы на youtube с данной песней.        
+ </div>
+ </div>
+</div>
+</div>
+
+<div class="main">
+   <div id="list"><script>(function($){$('#list').load('list.html');})(jQuery);</script></div>
+  </div>
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+ $('.spoiler_links').click(function(){
+     if($(this).next('div').is(':hidden')){$("div[class^='spoiler-body']").hide('normal');}
+  $(this).parent().children('div.spoiler-body').toggle('normal');
+  return false;
+ });
+});
+</script>
+ 
+</body>
+</html>
